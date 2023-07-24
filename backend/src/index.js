@@ -24,8 +24,11 @@ import swaggerUiExpress from 'swagger-ui-express';
 
 const whiteList = [
   "http://localhost:3000",
-  "http://localhost:8080"
+  "http://localhost:8080",
+  "https://sportecommercefrontend-production.up.railway.app/"
 ]
+
+
 const corsOpts = {
   origin: function (origin, callback) {
     (whiteList.indexOf(origin) !== -1 || !origin)
@@ -44,7 +47,7 @@ const swaggerOpts = {
   definition: {
     openapi: '3.0.1',
     info: {
-      title: "Natufriend - API documentation",
+      title: "SportE - API documentation",
       description: "Description of the APIRest"
     }
   },
