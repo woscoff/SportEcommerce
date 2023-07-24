@@ -1,0 +1,233 @@
+paths:
+  /api/cart/:id:
+    get:
+      summary: "Ver los productos de un carrito"
+      tags:
+        - Cart
+      parameters:
+      - name: 'idCart'
+      in: path
+      required: true
+      description: 'Id del carrito'
+      schema:
+        type: String
+      responses:
+        '200':
+          description: 'Productos encontrados'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+    put:
+      summary: "Actualizar los productos de un carrito"
+      tags:
+        - Cart
+      parameters:
+      - name: 'idCart'
+      in: path
+      required: true
+      description: 'Id del carrito'
+      schema:
+        type: String
+      responses:
+        '200':
+          description: 'Productos actualizados'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+    delete:
+      summary: "Eliminar un carrito"
+      tags:
+        - Cart
+      parameters:
+      - name: 'idCart'
+      in: path
+      required: true
+      description: 'Id del carrito'
+      schema:
+        type: String
+      responses:
+        '200':
+          description: 'Carrito eliminado'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+  /api/cart/:
+    post:
+      summary: "Crear un nuevo carrito"
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: 'Carrito creado'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '500':
+          description: 'Error'
+  /api/cart/{id}/product/{id_prod}:
+    put:
+      summary: Actualizar un producto del carrito
+      tags:
+        - Cart
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Id del carrito
+          schema:
+            type: string
+        - name: id_prod
+          in: path
+          required: true
+          description: Id del producto
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Producto actualizado'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+    post:
+      summary: Agregar un producto a un carrito
+      tags:
+        - Cart
+      parameters:
+        - name: 'idCart'
+          in: path
+          required: true
+          description: 'Id del carrito'
+          schema:
+            type: string
+        - name: 'idProd'
+          in: path
+          required: true
+          description: 'Id del producto'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 'Producto agregado'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+    delete:
+      summary: Eliminar un producto de un carrito
+      tags:
+        - Cart
+      parameters:
+        - name: 'idCart'
+          in: path
+          required: true
+          description: 'Id del carrito'
+          schema:
+            type: String
+        - name: 'idProd'
+          in: path
+          required: true
+          description: 'Id del producto'
+          schema:
+            type: String
+      responses:
+        '200':
+          description: 'Producto eliminado'
+          content:
+            application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#components/schemas/Cart'
+        '401':
+          description: 'No active session'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No active session
+        '500':
+          description: 'Error'
+
+
+
+
+
+components:
+  schemas:
+    Cart:
+      type: object
+      properties:
+        _id:
+          type: String
+        products:
+          type: array
+        __v:
+          type: integer
+      example:
+        _id: ObjectID('123456')
+        products:
+          productId: ObjectID('09876')
+          quantity: 2
+        __v: 0

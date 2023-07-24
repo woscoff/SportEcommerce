@@ -1,0 +1,139 @@
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-custom {
+    display: inline-block;
+    color:#fff;
+    padding: 8px 16px;
+    background-color: #00bfff;
+    border-radius: 5px;
+    text-decoration: #00bfff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #00bfff;
+}
+
+#btn-custom{
+    display: inline-block;
+    color:#fff;
+    padding: 8px 16px;
+    background-color: #00bfff;
+    border-radius: 5px;
+    text-decoration: #00bfff;
+    transition: background-color 0.3s ease;
+}
+
+#btn-custom:hover {
+    background-color: #00bfff;
+}
+
+/* Estilos para el footer */
+
+.lorem{
+    color:lightblue ;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+.content {
+    flex: 1;
+    /* Agrega padding o margen superior e inferior para separar el contenido del footer */
+}
+
+
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    /* Asegura que el footer quede pegado en la parte inferior */
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.footer-link {
+  color: #00bfff;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.link{
+    color:#00bfff;
+}
+.link:hover{
+    color: #000;
+}
+
+h1{
+    margin-top: 10px;
+}
+
+#form-login > *{
+    font-weight: 400;
+}
+
+.container-login-view{
+    margin: 20px;
+}
+
+.message-error-login{
+    color: rgb(165, 4, 4);
+}
+.hidden{
+    display: none;
+}
+
+
+
+
+
+/* Estilo para los botones de categorías */
+
+
+
+.categories{
+    padding: top 20px;
+    padding-bottom: 8px;
+}
+
+a{
+    color: whitesmoke
+}
+
+.card-title{
+    font-size: 14pt;
+}
+
+.card-text > p{
+    font-size: 10pt;
+}
+
+.btn-card-addtocart{
+    font-size: 10pt;
+}

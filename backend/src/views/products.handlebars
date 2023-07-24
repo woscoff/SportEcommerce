@@ -1,0 +1,49 @@
+{{>navbar}}
+<div class="content">
+<h2>Productos en venta</h2>
+<div class="container categories">
+	<span>Categorías:</span>
+	<a href="?" class="link">Todo</a>
+	<a href="?category=Remeras" class="link">Remeras</a>
+	<a href="?category=Pantalones" class="link">Pantalones</a>
+	<a href="?category=Zapatillas" class="link">Zapatillas</a>
+</div>
+<div class="container items-per-page"></div>
+{{#if statusBool}}
+<div class="container">
+	<div class="row">
+		{{#each payload}}
+		<div class="col-4 card product">
+			<div class="card-body">
+				<h3 class="card-title">{{title}}</h3>
+				<div class="card-text">
+					<p>{{description}}</p>
+					{{#if thumbnails}}
+                        <img src="{{thumbnails}}" alt="Product Image">
+                    {{/if}}
+					<span>Precio: $ {{price}}</span>
+				</div>
+				<div class="card-button">
+					<button class="btn btn-primary btn-card-addtocart">Agregar al carrito</button>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>
+
+{{else}}
+<div>
+	<h2>No se encontraron productos</h2>
+</div>
+{{/if}} {{#if statusBool}}
+<div class="container container-pages">
+	{{#if hasPrevPage}}
+	<a href="">PAG ANTERIOR</a>
+	{{/if}} {{#if hasNextPage}}
+	<a href="">PAG ANTERIOR</a>
+	{{/if}}
+</div>
+{{/if}}
+<script src="js/products.js"></script>
+</div>

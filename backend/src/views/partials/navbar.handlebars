@@ -1,0 +1,42 @@
+{{!-- <nav class='navbar navbar-dark bg-dark'>
+    <div class='container'>
+        <a href='/' class='navbar-brand'>
+            <h1 class='title'>ecommerce</h1>
+        </a>
+
+        {{#if user}}
+        <div class='navbar-text'>
+            Bienvenidx
+            <b>{{user.name}}</b>. Tu rol es {{user.role}}
+        </div>
+        <div class='navbar-actions'>
+            <a href='#' class='btn btn-primary mr-2'>Remeras</a>
+            <a href='#' class='btn btn-primary mr-2'>Pantalones</a>
+            <a href='#' class='btn btn-primary mr-2'>Zapatillas</a>
+            <a href='/api/session/logout' class='btn btn-danger'>Logout</a>
+        </div>
+        {{/if}}
+    </div>
+</nav> --}}
+
+
+<nav class='navbar navbar-dark bg-dark'>
+    <div class='container'>
+        <a href='/' class='navbar-brand'>
+            <h1 class='title'>ecommerce</h1>
+        </a>
+
+        {{#if user}}
+        <div class='navbar-text'>
+            Bienvenidx
+            <b>{{user.name}}</b>. Tu rol es {{user.role}}
+        </div>
+        <div class='navbar-actions'>
+            <a href='#' class='btn btn-custom mr-2'>Remeras</a>
+            <a href='#' class='btn btn-custom mr-2'>Pantalones</a>
+            <a href='#' class='btn btn-custom mr-2'>Zapatillas</a>
+            <a href='/api/session/logout' class='btn btn-danger'>Logout</a>
+        </div>
+        {{/if}}
+    </div>
+</nav>

@@ -1,0 +1,24 @@
+{{>navbar}}
+<h1>Live chat</h1>
+
+<div id='containerChatBox'>
+    <textarea id='chatBox' rows='10' cols='80' readonly>
+    </textarea>
+</div>
+
+<div id='containerMessageForm'>
+    <form id='messageForm'>
+        {{!-- <input type='text' id='senderName' placeholder='Nombre' />
+        <input type='text' id='senderEmail' placeholder='e-mail' /> --}}
+        <input type='text' id='senderText' placeholder='Mensaje' />
+        <button id="sendButton">Enviar</button>
+    </form>
+</div>
+
+<script
+    src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.min.js'
+    integrity='sha512-uXal8CICQ52UxoF9A3yBP6GUXGu5N2IoTZf/YXGMW4M0AvNyViA0ZjpGf9uqRpkN4kyx41Y5I0DmTQNOS6G05A=='
+    crossorigin='anonymous'
+    referrerpolicy='no-referrer'
+></script>
+<script src='/js/chat.js'></script>
